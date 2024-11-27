@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="header-profile">
+                <div class="profile-image-container">
+                    <img src="static/mad.jpg" alt="Profile" class="header-profile-img" id="profileImage">
+                    <div class="image-upload-overlay hidden">
+                        <input type="file" id="imageUpload" accept="image/*" class="hidden">
+                        <label for="imageUpload" class="upload-btn">
+                            <i class="fas fa-camera"></i> Change Photo
+                        </label>
+                    </div>
+                </div>
+                <div class="edit-controls">
+                    <button id="editModeBtn" class="edit-btn">
+                        <i class="fas fa-edit"></i> Customize
+                    </button>
+                    <button id="saveChangesBtn" class="save-btn hidden">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                </div>
+                <h1 id="userName" class="editable" contenteditable="false">Sai Kiran</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#skills-certifications"><i class="fas fa-certificate"></i> Professional Profile</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section - Editable -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2><i class="fas fa-user-circle"></i> About Me</h2>
+            <div class="profile">
+                <div class="profile-content">
+                    <p id="profileSummary" class="editable" contenteditable="false">
+                        Skilled Data Science and Python Developer with a strong foundation in machine learning, computer vision, and backend development. Experienced in designing efficient data processing pipelines, developing REST APIs, and managing end-to-end model deployment workflows. Proven track record of increasing annotation efficiency with auto-annotation pipelines and enhancing data management with Python-based SDKs. Adept at leveraging advanced AI models and LLMs like GPT-3.5 for prompt engineering and contextual response generation. Skilled in continuous integration, API batch processing, and data augmentation to drive high-quality, scalable solutions in supply chain and computer vision domains. Minor experience in building websites via html, css, js with the help of backend via flask.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - Static Content -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2><i class="fas fa-tasks"></i> Projects</h2>
+            <div class="project-grid">
+                <!-- Sample Project 1 -->
+                <div class="project-card">
+                    <h4>Retail Autonomous Store</h4>
+                    <p>A Cashier less store based on walk-in and walk-out strategy where customers simply walk-in and pick-up the
+                        necessary items and walk-out where the bill gets generated in a automated-way.</p>
+                    <p class="TechStack">Tech-Stack: Python, Dataloop, computer vision, Deep learning, Opencv, numpy, augmentations, Pillow, MinIO
+                        storage system, Linux OS, Flask, CNNs</p>
+                </div>
+                
+                <!-- Sample Project 2 -->
+                <div class="project-card">
+                    <h4>Retail Kirana Store Portal - Personal project</h4>
+                    <p>Developing a web application for managing retail store operations with modules for stock inventory tracking.
+                        Current features include stock management. Upcoming modules under development include sales data
+                        recording, and date-range-based reporting, enhanced sales analytics, credit management for tracking customer
+                        credit, and a user authentication system for secure access.</p>
+                    <p class="TechStack">Tech-Stack: Flask, SQLiteDB, HTML, CSS, JavaScript, and Git for version control.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h4>Road Transport Accident Severity Prediction</h4>
+                    <p>Prediciton of injuries and the severity of injury for people who met in road accidents</p>
+                    <p class="TechStack">Tech-Stack: Python, pandas, numpy, seaborn, matplotlib,scikit-learn, Streamlit</p>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Profile Section - Static Content -->
+    <section id="skills-certifications" class="section">
+        <div class="container">
+            <h2><i class="fas fa-award"></i> Professional Profile</h2>
+            <div class="skills-certifications-container">
+                <!-- Experience Section -->
+                <div class="work-experience">
+                    <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                    <ul class="work-experience-list">
+                        <!-- Sample Experience -->
+                        <li class="experience-item">
+                            <h4>Python Software Developer</h4>
+                            <h5>Limasoft Pvt. Ltd</h5>
+                            <p class="duration">January 2024 - Present</p>
+                            <p class="description">Designed and developed REST APIs for various use cases, ensuring robust and scalable solutions. Worked extensively with ChromaDB to provide similar results to query operations, enhancing data retrieval efficiency and accuracy. Managed build processes using Jenkins, ensuring continuous integration and delivery of high-quality software. Proficient in utilizing GPT for generating contextual sentences based on provided data, applied in day-to-day activities such as code generation and information acquisition. Experienced in batch API processing to optimize performance and efficiency in handling multiple tasks. Familiar with advanced AI models like Gemini and Meta.</p>
+                            <p class="TechStack">Tech Stack: Python,Rest API Development,DBMS,Jenkins,Natural Language Processing</p>
+                        </li>
+                        <li class="experience-item">
+                            <h4>Systems Engineer - Autonomous Retail Store</h4>
+                            <h5>Infosys</h5>
+                            <p class="duration">August 2021 - December 2023</p>
+                            <p class="description">A Cashier less store based on walk-in and walk-out strategy where customers simply walk-in and pick-up the necessary items and walk-out where the bill gets generated in an automated way. Managed and processed thousands of images for computer vision models. Developed auto-annotation pipeline, improving annotation efficiency by 30. Evaluated various models for use-case suitability, focusing on body-pose and triplet loss classification models. Developed foundational skills in prompting using ChatGPT 3.5, effectively generating varied responses. Built a Python-based SDK pipeline for data management, labeling, and model training, producing ONNX format outputs. Developed a Flask-based UI for image augmentation using Albumentations. Designed and developed a synthetic data generation pipeline with a data scientist, reducing data capturing and annotation efforts. Achieved superior object-detection results with combined synthetic and manually collected data. Trained and evaluated object-detection models. Managed the annotation team</p>
+                        </li>
+                        
+                        <!-- Add more experiences here -->
+                    </ul>
+                </div>
+                
+                <div class="skills-certifications">
+                    <!-- Skills Section -->
+                    <div class="skills">
+                        <h3><i class="fas fa-tools"></i> Skills</h3>
+                    
+                        <!-- Dropdown for view selection -->
+                        <div class="skills-dropdown">
+                            <label for="view-mode">View Mode:</label>
+                            <select id="view-mode" onchange="toggleSkillsView()">
+                                <option value="classify">Classify</option>
+                                <option value="all">All</option>
+                            </select>
+                        </div>
+                    
+                        <!-- Classified Skills Container -->
+                        <div id="classified-skills" class="skills-container">
+                            <div class="skills-group">
+                                <h4>Programming Languages & Libraries</h4>
+                                <ul class="skills-list">
+                                    <li>Python</li>
+                                    <li>PyTorch</li>
+                                    <li>OpenCV</li>
+                                    <li>Numpy</li>
+                                    <li>Pandas</li>
+                                    <li>Matplotlib</li>
+                                    <li>PIL</li>
+                                    <li>Flask</li>
+                                    <li>REST API Development</li>
+                                </ul>
+                            </div>
+                            <div class="skills-group">
+                                <h4>Data Processing & Analysis</h4>
+                                <ul class="skills-list">
+                                    <li>Image Processing</li>
+                                    <li>Computer Vision</li>
+                                    <li>Data Structures and Algorithms</li>
+                                    <li>SQL (Beginner)</li>
+                                </ul>
+                            </div>
+                            <div class="skills-group">
+                                <h4>Machine Learning & AI</h4>
+                                <ul class="skills-list">
+                                    <li>Convolutional Neural Networks (CNNs)</li>
+                                    <li>Transformers</li>
+                                    <li>Prompting with LLMs (GPT-3.5, GPT-4)</li>
+                                    <li>OpenAI API</li>
+                                    <li>NLP models (BART, BERT)</li>
+                                    <li>Stable Diffusion (Basic)</li>
+                                    <li>Azure Custom Vision</li>
+                                    <li>DeepStream (Basic)</li>
+                                    <li>ONNX</li>
+                                </ul>
+                            </div>
+                            <div class="skills-group">
+                                <h4>DevOps & Tools</h4>
+                                <ul class="skills-list">
+                                    <li>Linux</li>
+                                    <li>Git</li>
+                                    <li>Jenkins</li>
+                                    <li>IoT (Basic)</li>
+                                    <li>Dataloop</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <!-- All Skills Container -->
+                        <div id="all-skills" class="skills-box" style="display: none;">
+                            <ul class="skills-list">
+                                <li>Azure Custom Vision</li>
+                                <li>BART</li>
+                                <li>BERT</li>
+                                <li>Computer Vision</li>
+                                <li>Convolutional Neural Networks (CNNs)</li>
+                                <li>Data Structures and Algorithms</li>
+                                <li>Dataloop</li>
+                                <li>DeepStream (Basic)</li>
+                                <li>Flask</li>
+                                <li>Git</li>
+                                <li>Image Processing</li>
+                                <li>IoT (Basic)</li>
+                                <li>Jenkins</li>
+                                <li>Linux</li>
+                                <li>Matplotlib</li>
+                                <li>Numpy</li>
+                                <li>ONNX</li>
+                                <li>OpenAI API</li>
+                                <li>OpenCV</li>
+                                <li>Pandas</li>
+                                <li>PyTorch</li>
+                                <li>Python</li>
+                                <li>REST API Development</li>
+                                <li>SQL (Beginner)</li>
+                                <li>Stable Diffusion (Basic)</li>
+                                <li>Transformers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Certifications Section -->
+                    <div class="certifications">
+                        <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                        <ul class="certifications-list">
+                            <!-- Sample Certification -->
+                            <li>
+                                <h4>IBM Applied AI Professional Certificate </h4>
+                                <p>Coursera</p>
+                                <p class="date">Feb 2023</p>
+                                <p class="credential-id">THDVZ36JTYA7</p>
+                                <!-- <p class="credential-url">https://www.coursera.org/account/accomplishments/specialization/certificate/THDVZ36JTYA7</p> -->
+                            </li>
+                            <li>
+                                <h4>Mega Guided Projects Certificate</h4>
+                                <p>The Machine Learning Company</p>
+                                <p class="date">Feb 2023</p>
+                                <p class="credential-id">MGP300200</p>
+                                <!-- <p class="credential-url">https://github.com/kishkath/Learning/blob/main/Certificates/MGP_completion_certificate.pdf</p> -->
+                            </li>
+                            <!-- Add more certifications here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Editable -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2><i class="fas fa-address-card"></i> Contact</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:madhuri.inaguri@gmail.com" id="emailContact" class="editable">Mail</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/sai-kiran-798943197/" id="linkedinContact" class="editable" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
