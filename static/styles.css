@@ -1,0 +1,670 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #001f3f; /* Ink blue */
+    color: #00aaff; /* White text for contrast */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-container, .skills-box {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-dropdown {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-dropdown label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.skills-group h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skills-list li:hover {
+    background-color: #e3e3e3;
+}
+
+
+
+/* Ensure the container and content align properly */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .profile {
+    display: flex;               /* Align the image and paragraph horizontally */
+    align-items: center;          /* Vertically center the content */
+    gap: 20px;                    /* Space between the image and paragraph */
+    margin-top: 20px;
+  }
+  
+  .profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;           /* Make the image circular */
+    object-fit: cover;
+  }
+  
+  .profile-text {
+    margin: 0;                    /* Remove default paragraph margin */
+    font-size: 18px;
+    line-height: 1.5;
+    flex: 1;                      /* Allow the paragraph to take up remaining space */
+  }
+
+  
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background-color: #000000; /* Black */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section styling */
+.section {
+    padding: 40px 0;
+    background: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', serif;
+    color: #00aaff; /* Light blue for contrast */
+    margin-bottom: 20px;
+}
+
+.section p, .section ul {
+    font-size: 1rem;
+    color: #000000; /* Black text for content */
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.project-card {
+    flex: 1;
+    min-width: 300px;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.skills-certifications-container {
+    display: flex;
+    gap: 20px; /* Space between work experience and skills & certifications */
+}
+
+.skills-certifications {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.work-experience {
+    flex: 1;
+    min-width: 300px;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.skills, .certifications, .work-experience {
+    margin-bottom: 20px;
+}
+
+.skills h3, .certifications h3, .work-experience h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', serif;
+    color: #00aaff; /* Light blue for contrast */
+    margin-bottom: 15px;
+}
+
+.skills-list, .certifications-list, .work-experience-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li, .certifications-list li {
+    background: #e8e8e8;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #000000; /* Black text for content */
+}
+
+.work-experience-list li {
+    margin-bottom: 15px;
+    color: #000000; /* Black text for content */
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke; /* Ink blue */
+    padding: 20px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000; /* Black text for labels */
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #000000; /* Black */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact section styling */
+#contact label {
+    color: #00aaff; /* Light blue for visibility */
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Add animations to sections */
+.section {
+    animation: fadeIn 0.8s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+/* Header animations */
+.header-content {
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Navigation hover effects */
+nav ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00aaff;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Button animations */
+.edit-btn, .add-btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.edit-btn:hover, .add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
+}
+
+.edit-btn:active, .add-btn:active {
+    transform: translateY(0);
+}
+
+/* Profile image hover effect */
+.profile-image-container {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover {
+    transform: scale(1.02);
+}
+
+.edit-image-btn {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover .edit-image-btn {
+    opacity: 1;
+}
+
+/* Project card animations */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills and certifications animations */
+.skills-list li, .certifications-list li {
+    transition: all 0.3s ease;
+}
+
+.skills-list li:hover, .certifications-list li:hover {
+    transform: translateX(5px);
+    background: #00aaff;
+    color: white;
+}
+
+
+.contact-item a {
+    color: #007BFF; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #0056b3; /* Darker shade on hover */
+    transform: translateX(10px);
+    text-decoration: underline;
+}
+
+
+/* Modal animations */
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    transform: translateY(-50px);
+    transition: all 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+/* Edit mode highlight */
+.edit-mode .editable {
+    animation: pulse 2s infinite;
+    border: 2px dashed #00aaff;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Loading animation */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00aaff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Tooltip animations */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    padding: 5px 10px;
+    background: #000;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+[data-tooltip]:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Header profile styling */
+.header-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.header-profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00aaff;
+    animation: fadeIn 0.8s ease-out;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.header-profile-img:hover {
+    transform: scale(1.05);
+    border-color: #ffffff;
+}
+
+/* Adjust header content layout */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Edit controls styling */
+.edit-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.save-btn {
+    background-color: #00aaff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #0088cc;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
+}
+
+.save-btn:active {
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animation for save button */
+@keyframes saveButtonAppear {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.save-btn.visible {
+    display: flex;
+    animation: saveButtonAppear 0.3s ease-out;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Experience item styles */
+.experience-item {
+    background-color: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.item-controls {
+    margin-top: 10px;
+}
+
+.item-controls button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #000;
+}
