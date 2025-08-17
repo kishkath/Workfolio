@@ -413,6 +413,15 @@ nav ul li a:hover::after {
     text-decoration: underline;
 }
 
+/* Contact Items */
+.contact-item {
+    @apply flex items-center space-x-4 p-5 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300;
+}
+
+.contact-icon {
+    @apply w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center text-primary-500;
+}
+
 
 /* Modal animations */
 .modal {
