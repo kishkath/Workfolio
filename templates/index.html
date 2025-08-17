@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,22 +16,8 @@
             <div class="header-profile">
                 <div class="profile-image-container">
                     <img src="static/mad.jpg" alt="Profile" class="header-profile-img" id="profileImage">
-                    <div class="image-upload-overlay hidden">
-                        <input type="file" id="imageUpload" accept="image/*" class="hidden">
-                        <label for="imageUpload" class="upload-btn">
-                            <i class="fas fa-camera"></i> Change Photo
-                        </label>
-                    </div>
                 </div>
-                <div class="edit-controls">
-                    <button id="editModeBtn" class="edit-btn">
-                        <i class="fas fa-edit"></i> Customize
-                    </button>
-                    <button id="saveChangesBtn" class="save-btn hidden">
-                        <i class="fas fa-save"></i> Save Changes
-                    </button>
-                </div>
-                <h1 id="userName" class="editable" contenteditable="false">Sai Kiran</h1>
+                <h1 id="userName">Sai Kiran</h1>
             </div>
             <nav>
                 <ul>
@@ -41,13 +30,13 @@
         </div>
     </header>
 
-    <!-- About Section - Editable -->
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h2><i class="fas fa-user-circle"></i> About Me</h2>
             <div class="profile">
                 <div class="profile-content">
-                    <p id="profileSummary" class="editable" contenteditable="false">
+                    <p id="profileSummary">
                         Skilled Data Science and Python Developer with a strong foundation in machine learning, computer vision, and backend development. Experienced in designing efficient data processing pipelines, developing REST APIs, and managing end-to-end model deployment workflows. Proven track record of increasing annotation efficiency with auto-annotation pipelines and enhancing data management with Python-based SDKs. Adept at leveraging advanced AI models and LLMs like GPT-3.5 for prompt engineering and contextual response generation. Skilled in continuous integration, API batch processing, and data augmentation to drive high-quality, scalable solutions in supply chain and computer vision domains. Minor experience in building websites via html, css, js with the help of backend via flask.
                     </p>
                 </div>
@@ -55,11 +44,14 @@
         </div>
     </section>
 
-    <!-- Projects Section - Static Content -->
+    <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
             <h2><i class="fas fa-tasks"></i> Projects</h2>
-            <div class="project-grid">
+            <div class="projects-slider-container">
+                <div class="projects-slider">
+                    <!-- Project Group 1 -->
+                    <div class="project-group">
                 <!-- Sample Project 1 -->
                 <div class="project-card">
                     <h4>Retail Autonomous Store</h4>
@@ -79,71 +71,258 @@
                     <p class="TechStack">Tech-Stack: Flask, SQLiteDB, HTML, CSS, JavaScript, and Git for version control.</p>
                 </div>
                 
+                        <!-- Sample Project 3 -->
                 <div class="project-card">
                     <h4>Road Transport Accident Severity Prediction</h4>
                     <p>Prediciton of injuries and the severity of injury for people who met in road accidents</p>
                     <p class="TechStack">Tech-Stack: Python, pandas, numpy, seaborn, matplotlib,scikit-learn, Streamlit</p>
                 </div>
-                <!-- Add more projects here -->
+                    </div>
+                    
+                    <!-- Project Group 2 -->
+                    <div class="project-group">
+                        <!-- Sample Project 4 -->
+                        <div class="project-card">
+                            <h4>Machine Learning Model Deployment</h4>
+                            <p>End-to-end machine learning pipeline with model training, evaluation, and deployment using Docker and cloud services.</p>
+                            <p class="TechStack">Tech-Stack: Python, Scikit-learn, Docker, AWS, Flask, REST API</p>
+                        </div>
+                        
+                        <!-- Sample Project 5 -->
+                        <div class="project-card">
+                            <h4>Data Visualization Dashboard</h4>
+                            <p>Interactive dashboard for real-time data visualization and analytics with dynamic filtering and reporting capabilities.</p>
+                            <p class="TechStack">Tech-Stack: React, D3.js, Node.js, MongoDB, Express</p>
+                        </div>
+                        
+                        <!-- Sample Project 6 -->
+                        <div class="project-card">
+                            <h4>Natural Language Processing Chatbot</h4>
+                            <p>AI-powered chatbot using advanced NLP techniques for customer support and automated responses.</p>
+                            <p class="TechStack">Tech-Stack: Python, TensorFlow, NLTK, BERT, Flask, WebSocket</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Group 3 -->
+                    <div class="project-group">
+                        <!-- Sample Project 7 -->
+                        <div class="project-card">
+                            <h4>E-commerce Recommendation System</h4>
+                            <p>Personalized product recommendation engine using collaborative filtering and content-based approaches.</p>
+                            <p class="TechStack">Tech-Stack: Python, Pandas, Scikit-learn, Redis, FastAPI</p>
+                        </div>
+                        
+                        <!-- Sample Project 8 -->
+                        <div class="project-card">
+                            <h4>IoT Smart Home Automation</h4>
+                            <p>Smart home system with sensor integration, automated controls, and mobile app for remote monitoring.</p>
+                            <p class="TechStack">Tech-Stack: Arduino, Raspberry Pi, Python, MQTT, React Native</p>
+                        </div>
+                        
+                        <!-- Sample Project 9 -->
+                        <div class="project-card">
+                            <h4>Blockchain Supply Chain Tracker</h4>
+                            <p>Transparent supply chain tracking system using blockchain technology for product authenticity verification.</p>
+                            <p class="TechStack">Tech-Stack: Solidity, Web3.js, React, Node.js, IPFS</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projects Slider Navigation -->
+                <div class="projects-slider-nav">
+                    <button class="projects-slider-btn prev-btn" onclick="slideProjects('prev')">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="projects-slider-dots">
+                        <span class="project-dot active" onclick="goToProjectSlide(0)"></span>
+                        <span class="project-dot" onclick="goToProjectSlide(1)"></span>
+                        <span class="project-dot" onclick="goToProjectSlide(2)"></span>
+                    </div>
+                    <button class="projects-slider-btn next-btn" onclick="slideProjects('next')">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Profile Section - Static Content -->
+    <!-- Professional Profile Section -->
     <section id="skills-certifications" class="section">
         <div class="container">
             <h2><i class="fas fa-award"></i> Professional Profile</h2>
-            <div class="skills-certifications-container">
-                <!-- Experience Section -->
-                <div class="work-experience">
+            
+            <!-- Work Experience Section -->
+            <div class="work-experience-section">
                     <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
-                    <ul class="work-experience-list">
-                        <!-- Sample Experience -->
-                        <li class="experience-item">
+                <div class="experience-slider-container">
+                    <div class="experience-slider">
+                        <!-- Experience Group 1 -->
+                        <div class="experience-group">
+                            <div class="experience-card">
+                                <button class="experience-maximize-btn" onclick="openExperienceModal()">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <div class="experience-header">
                             <h4>Python Software Developer</h4>
                             <h5>Limasoft Pvt. Ltd</h5>
                             <p class="duration">January 2024 - Present</p>
-                            <p class="description">
-                              <ul>
-                                <li><strong>Designed and developed REST APIs</strong> for diverse use cases, ensuring robust and scalable solutions.</li>
-                                <li><strong>Implemented ChromaDB</strong> for efficient and accurate data retrieval through query operations.</li>
-                                <li><strong>Managed CI/CD pipelines</strong> using Jenkins, ensuring continuous integration and delivery of high-quality software.</li>
-                                <li><strong>Utilized GPT models</strong> for contextual sentence generation, supporting tasks like code generation and information retrieval.</li>
-                                <li><strong>Optimized performance</strong> through batch API processing, enhancing efficiency in handling multiple tasks.</li>
-                                <li><strong>Familiar with advanced AI models</strong> such as Gemini and Meta, applying them in various use cases.</li>
+                                </div>
+                                                            <div class="experience-content">
+                                <div class="experience-section">
+                                    <h6 class="experience-subheader">Projects:</h6>
+                                    <ul>
+                                        <li><strong>AI-Powered API Development:</strong> Designed and developed REST APIs for diverse use cases, ensuring robust and scalable solutions.</li>
+                                        <li><strong>ChromaDB Integration:</strong> Implemented ChromaDB for efficient and accurate data retrieval through query operations.</li>
+                                        <li><strong>GPT Model Integration:</strong> Utilized GPT models for contextual sentence generation, supporting tasks like code generation and information retrieval.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="experience-section">
+                                    <h6 class="experience-subheader">Roles:</h6>
+                                    <div class="role-item">
+                                        <h6 class="role-title">Backend Developer:</h6>
+                                        <ul>
+                                            <li>Managed CI/CD pipelines using Jenkins, ensuring continuous integration and delivery of high-quality software</li>
+                                            <li>Optimized performance through batch API processing, enhancing efficiency in handling multiple tasks</li>
+                                        </ul>
+                                    </div>
+                                    <div class="role-item">
+                                        <h6 class="role-title">AI/ML Engineer:</h6>
+                                        <ul>
+                                            <li>Familiar with advanced AI models such as Gemini and Meta, applying them in various use cases</li>
+                                            <li>Developed and maintained AI model pipelines for production deployment</li>
                               </ul>
-                            </p>
-                            <p class="TechStack">Tech Stack: Python,Rest API Development,DBMS,Jenkins,Natural Language Processing</p>
-                        </li>
-                        <li class="experience-item">
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="experience-tech">
+                                    <p class="TechStack">Tech Stack: Python, REST API Development, DBMS, Jenkins, Natural Language Processing</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience Group 2 -->
+                        <div class="experience-group">
+                            <div class="experience-card">
+                                <button class="experience-maximize-btn" onclick="openExperienceModal()">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <div class="experience-header">
                             <h4>Systems Engineer - Autonomous Retail Store</h4>
                             <h5>Infosys</h5>
                             <p class="duration">August 2021 - December 2023</p>
-                            <p class="description">
-                              <ul>
-                                <li><strong>Developed a cashier-less store system</strong> using a walk-in and walk-out strategy, enabling automated billing upon customer exit.</li>
-                                <li><strong>Managed and processed thousands of images</strong> for computer vision model training and evaluation.</li>
-                                <li><strong>Built an auto-annotation pipeline</strong>, improving annotation efficiency by 30%.</li>
-                                <li><strong>Evaluated various models</strong> for use-case suitability, focusing on body-pose estimation and triplet loss classification.</li>
-                                <li><strong>Gained expertise in ChatGPT 3.5 prompting</strong>, effectively generating diverse and context-aware responses.</li>
-                                <li><strong>Developed a Python-based SDK pipeline</strong> for data management, labeling, and model training, producing ONNX format outputs.</li>
-                                <li><strong>Created a Flask-based UI</strong> for image augmentation using the Albumentations library.</li>
-                                <li><strong>Designed and developed a synthetic data generation pipeline</strong> with a data scientist, reducing data capture and annotation efforts.</li>
-                                <li><strong>Achieved superior object detection performance</strong> by combining synthetic and manually collected data.</li>
-                                <li><strong>Trained and evaluated object detection models</strong> for real-world applications.</li>
-                                <li><strong>Managed the annotation team</strong>, ensuring data quality and project efficiency.</li>
+                                </div>
+                                                            <div class="experience-content">
+                                <div class="experience-section">
+                                    <h6 class="experience-subheader">Projects:</h6>
+                                    <ul>
+                                        <li><strong>Autonomous Retail Store System:</strong> Developed a cashier-less store system using a walk-in and walk-out strategy, enabling automated billing upon customer exit.</li>
+                                        <li><strong>Computer Vision Pipeline:</strong> Managed and processed thousands of images for computer vision model training and evaluation.</li>
+                                        <li><strong>Auto-Annotation System:</strong> Built an auto-annotation pipeline, improving annotation efficiency by 30%.</li>
+                                        <li><strong>Model Evaluation Framework:</strong> Evaluated various models for use-case suitability, focusing on body-pose estimation and triplet loss classification.</li>
+                                        <li><strong>SDK Development:</strong> Developed a Python-based SDK pipeline for data management, labeling, and model training, producing ONNX format outputs.</li>
+                                        <li><strong>Flask UI Application:</strong> Created a Flask-based UI for image augmentation using the Albumentations library.</li>
+                                        <li><strong>Synthetic Data Generation:</strong> Designed and developed a synthetic data generation pipeline with a data scientist, reducing data capture and annotation efforts.</li>
+                                        <li><strong>Object Detection Models:</strong> Trained and evaluated object detection models for real-world applications.</li>
                               </ul>
-                            </p>
-
-                        </li>
+                                </div>
+                                
+                                <div class="experience-section">
+                                    <h6 class="experience-subheader">Roles:</h6>
+                                    <div class="role-item">
+                                        <h6 class="role-title">Computer Vision Engineer:</h6>
+                                        <ul>
+                                            <li>Achieved superior object detection performance by combining synthetic and manually collected data</li>
+                                            <li>Specialized in body-pose estimation and triplet loss classification models</li>
+                                        </ul>
+                                    </div>
+                                    <div class="role-item">
+                                        <h6 class="role-title">AI/ML Developer:</h6>
+                                        <ul>
+                                            <li>Gained expertise in ChatGPT 3.5 prompting, effectively generating diverse and context-aware responses</li>
+                                            <li>Developed and maintained AI model pipelines for production deployment</li>
+                                        </ul>
+                                    </div>
+                                    <div class="role-item">
+                                        <h6 class="role-title">Team Lead:</h6>
+                                        <ul>
+                                            <li>Managed the annotation team, ensuring data quality and project efficiency</li>
+                                            <li>Coordinated cross-functional collaboration between data scientists and engineers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="experience-tech">
+                                    <p class="TechStack">Tech Stack: Python, Computer Vision, Deep Learning, OpenCV, PyTorch, Flask, ONNX</p>
+                                </div>
+                            </div>
+                        </div>
                         
-                        <!-- Add more experiences here -->
+                        <!-- Experience Group 3 (Sample) -->
+                        <div class="experience-group">
+                            <div class="experience-card">
+                                <button class="experience-maximize-btn" onclick="openExperienceModal()">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <div class="experience-header">
+                                    <h4>Data Science Intern</h4>
+                                    <h5>Tech Startup</h5>
+                                    <p class="duration">May 2021 - July 2021</p>
+                                </div>
+                                                            <div class="experience-content">
+                                <div class="experience-section">
+                                    <h6 class="experience-subheader">Projects:</h6>
+                                    <ul>
+                                        <li><strong>Customer Behavior Analysis:</strong> Developed machine learning models for customer behavior prediction and market analysis.</li>
+                                        <li><strong>Business Intelligence Dashboard:</strong> Created data visualization dashboards using Python and Tableau for business insights.</li>
+                                        <li><strong>Data Pipeline Development:</strong> Implemented data preprocessing pipelines for cleaning and transforming large datasets.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="experience-section">
+                                    <h6 class="experience-subheader">Roles:</h6>
+                                    <div class="role-item">
+                                        <h6 class="role-title">Data Scientist:</h6>
+                                        <ul>
+                                            <li>Developed predictive models for customer behavior and market trends</li>
+                                            <li>Created comprehensive data analysis reports and presentations</li>
+                                        </ul>
+                                    </div>
+                                    <div class="role-item">
+                                        <h6 class="role-title">Business Analyst:</h6>
+                                        <ul>
+                                            <li>Collaborated with cross-functional teams to deliver data-driven solutions for business problems</li>
+                                            <li>Presented findings and recommendations to stakeholders and management teams</li>
                     </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="experience-tech">
+                                    <p class="TechStack">Tech Stack: Python, Pandas, Scikit-learn, Tableau, SQL, Jupyter Notebooks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Slider Navigation -->
+                    <div class="experience-slider-nav">
+                        <button class="experience-slider-btn prev-btn" onclick="slideExperience('prev')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="experience-slider-dots">
+                            <span class="experience-dot active" onclick="goToExperienceSlide(0)"></span>
+                            <span class="experience-dot" onclick="goToExperienceSlide(1)"></span>
+                            <span class="experience-dot" onclick="goToExperienceSlide(2)"></span>
+                        </div>
+                        <button class="experience-slider-btn next-btn" onclick="slideExperience('next')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
                 </div>
                 
-                <div class="skills-certifications">
                     <!-- Skills Section -->
-                    <div class="skills">
+            <div class="skills-section">
                         <h3><i class="fas fa-tools"></i> Skills</h3>
                     
                         <!-- Dropdown for view selection -->
@@ -238,106 +417,313 @@
                             </ul>
                         </div>
                     </div>
-                    
 
                     <!-- Certifications Section -->
-                    <div class="certifications">
+            <div class="certifications-section">
                         <h3><i class="fas fa-certificate"></i> Certifications</h3>
-                        <ul class="certifications-list">
-                            <!-- Sample Certification -->
-                            <li>
-                                <h4>IBM Applied AI Professional Certificate </h4>
-                                <p>Coursera</p>
-                                <p class="date">Feb 2023</p>
-                                <p class="credential-id">THDVZ36JTYA7</p>
-                                <!-- <p class="credential-url">https://www.coursera.org/account/accomplishments/specialization/certificate/THDVZ36JTYA7</p> -->
-                            </li>
-                            <li>
+                <div class="certifications-slider-container">
+                    <div class="certifications-slider">
+                        <!-- Certification 1 -->
+                        <div class="certification-slide">
+                            <div class="certification-card">
+                                <div class="certification-image">
+                                    <img src="https://via.placeholder.com/280x180/87CEEB/001f3f?text=IBM+AI+Cert" alt="IBM Applied AI Professional Certificate">
+                                </div>
+                                <div class="certification-content">
+                                    <div class="certification-icon">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <h4>IBM Applied AI Professional Certificate</h4>
+                                    <p class="certification-provider">Coursera</p>
+                                    <p class="certification-date">Feb 2023</p>
+                                    <p class="certification-id">THDVZ36JTYA7</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Certification 2 -->
+                        <div class="certification-slide">
+                            <div class="certification-card">
+                                <div class="certification-image">
+                                    <img src="https://via.placeholder.com/280x180/4682B4/ffffff?text=ML+Projects+Cert" alt="Mega Guided Projects Certificate">
+                                </div>
+                                <div class="certification-content">
+                                    <div class="certification-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
                                 <h4>Mega Guided Projects Certificate</h4>
-                                <p>The Machine Learning Company</p>
-                                <p class="date">Feb 2023</p>
-                                <p class="credential-id">MGP300200</p>
-                                <!-- <p class="credential-url">https://github.com/kishkath/Learning/blob/main/Certificates/MGP_completion_certificate.pdf</p> -->
-                            </li>
-                            <!-- Add more certifications here -->
-                        </ul>
+                                    <p class="certification-provider">The Machine Learning Company</p>
+                                    <p class="certification-date">Feb 2023</p>
+                                    <p class="certification-id">MGP300200</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Certification 3 (Sample) -->
+                        <div class="certification-slide">
+                            <div class="certification-card">
+                                <div class="certification-image">
+                                    <img src="https://via.placeholder.com/280x180/5F9EA0/ffffff?text=Python+Cert" alt="Python Programming Certificate">
+                                </div>
+                                <div class="certification-content">
+                                    <div class="certification-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <h4>Python Programming Certificate</h4>
+                                    <p class="certification-provider">Udemy</p>
+                                    <p class="certification-date">Jan 2023</p>
+                                    <p class="certification-id">PYTHON2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Navigation -->
+                    <div class="slider-nav">
+                        <button class="slider-btn prev-btn" onclick="slideCertifications('prev')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="goToSlide(0)"></span>
+                            <span class="dot" onclick="goToSlide(1)"></span>
+                            <span class="dot" onclick="goToSlide(2)"></span>
+                        </div>
+                        <button class="slider-btn next-btn" onclick="slideCertifications('next')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section - Editable -->
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white dark:bg-gray-900">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+    <!-- Modern Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
             <!-- Heading -->
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-                    <i class="fas fa-address-card text-primary-500 mr-2"></i> Get in Touch
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300">
-                    Connect with me via email or LinkedIn, or drop a message below!
-                </p>
-            </div>
-            
-            <!-- Contact Info Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-                <!-- Email -->
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope text-primary-600 text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-gray-800 dark:text-gray-200 font-semibold text-lg">Email</h3>
-                        <a href="mailto:nuthanchoudari@gmail.com" id="emailContact" class="text-primary-500 hover:text-primary-600 transition-colors duration-200">nut@gmail.com</a>
-                    </div>
-                </div>
-                
-                <!-- LinkedIn -->
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin text-primary-600 text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-gray-800 dark:text-gray-200 font-semibold text-lg">LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/sai-kiran-798943197/" id="linkedinContact" target="_blank" rel="noopener noreferrer" class="text-primary-500 hover:text-primary-600 transition-colors duration-200">abc-ram</a>
-                    </div>
-                </div>
+            <div class="contact-header">
+                <h2><i class="fas fa-address-card"></i> Get in Touch</h2>
+                <p class="contact-subtitle">Connect with me via email or LinkedIn, or drop a message below!</p>
             </div>
             
             <!-- Contact Form -->
-            <form id="contactForm" class="space-y-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
-                        <input type="text" id="name" name="name" required class="form-input w-full" placeholder="Your name">
+            <form id="contactForm" class="contact-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required class="form-input" placeholder="Your name">
                     </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
-                        <input type="email" id="email" name="email" required class="form-input w-full" placeholder="your.email@example.com">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required class="form-input" placeholder="your.email@example.com">
                     </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="1" required class="form-textarea w-full" placeholder="Your message here..."></textarea>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="form-textarea" placeholder="Your message here..."></textarea>
                     </div>
                 </div>
-                <div class="text-center pt-4">
-                    <button type="submit" class="btn-primary px-6 py-3 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-paper-plane mr-2"></i> Send Message
+                <div class="form-submit">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
                     </button>
                 </div>
             </form>
+            
+            <!-- Contact Info Cards -->
+            <div class="contact-info-grid">
+                <!-- Email -->
+                <div class="contact-card">
+                    <a href="mailto:nuthanchoudari@gmail.com" class="contact-icon-link">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- LinkedIn -->
+                <div class="contact-card">
+                    <a href="https://www.linkedin.com/in/sai-kiran-798943197/" target="_blank" rel="noopener noreferrer" class="contact-icon-link">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- GitHub -->
+                <div class="contact-card">
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-icon-link">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
-
 
     <footer>
         <div class="container">
             <p>&copy; 2024 Portfolio. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Experience Modal -->
+    <div class="experience-modal" id="experienceModal">
+        <div class="experience-modal-content">
+            <button class="experience-modal-close" onclick="closeExperienceModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="experience-modal-header">
+                <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+            </div>
+            
+            <div class="experience-modal-slider-container">
+                <div class="experience-modal-slider" id="experienceModalSlider">
+                    <!-- Experience 1 -->
+                    <div class="experience-modal-slide">
+                        <div class="experience-modal-card">
+                            <h4>Python Software Developer</h4>
+                            <h5>Limasoft Pvt. Ltd</h5>
+                            <p class="duration">January 2024 - Present</p>
+                            
+                            <div class="experience-section">
+                                <h6 class="experience-subheader">Projects:</h6>
+                                <ul>
+                                    <li><strong>AI-Powered API Development:</strong> Designed and developed REST APIs for diverse use cases, ensuring robust and scalable solutions.</li>
+                                    <li><strong>ChromaDB Integration:</strong> Implemented ChromaDB for efficient and accurate data retrieval through query operations.</li>
+                                    <li><strong>GPT Model Integration:</strong> Utilized GPT models for contextual sentence generation, supporting tasks like code generation and information retrieval.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="experience-section">
+                                <h6 class="experience-subheader">Roles:</h6>
+                                <div class="role-item">
+                                    <h6 class="role-title">Backend Developer:</h6>
+                                    <ul>
+                                        <li>Managed CI/CD pipelines using Jenkins, ensuring continuous integration and delivery of high-quality software</li>
+                                        <li>Optimized performance through batch API processing, enhancing efficiency in handling multiple tasks</li>
+                                    </ul>
+                                </div>
+                                <div class="role-item">
+                                    <h6 class="role-title">AI/ML Engineer:</h6>
+                                    <ul>
+                                        <li>Familiar with advanced AI models such as Gemini and Meta, applying them in various use cases</li>
+                                        <li>Developed and maintained AI model pipelines for production deployment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <p class="TechStack">Tech Stack: Python, REST API Development, DBMS, Jenkins, Natural Language Processing</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 2 -->
+                    <div class="experience-modal-slide">
+                        <div class="experience-modal-card">
+                            <h4>Systems Engineer - Autonomous Retail Store</h4>
+                            <h5>Infosys</h5>
+                            <p class="duration">August 2021 - December 2023</p>
+                            
+                            <div class="experience-section">
+                                <h6 class="experience-subheader">Projects:</h6>
+                                <ul>
+                                    <li><strong>Autonomous Retail Store System:</strong> Developed a cashier-less store system using a walk-in and walk-out strategy, enabling automated billing upon customer exit.</li>
+                                    <li><strong>Computer Vision Pipeline:</strong> Managed and processed thousands of images for computer vision model training and evaluation.</li>
+                                    <li><strong>Auto-Annotation System:</strong> Built an auto-annotation pipeline, improving annotation efficiency by 30%.</li>
+                                    <li><strong>Model Evaluation Framework:</strong> Evaluated various models for use-case suitability, focusing on body-pose estimation and triplet loss classification.</li>
+                                    <li><strong>SDK Development:</strong> Developed a Python-based SDK pipeline for data management, labeling, and model training, producing ONNX format outputs.</li>
+                                    <li><strong>Flask UI Application:</strong> Created a Flask-based UI for image augmentation using the Albumentations library.</li>
+                                    <li><strong>Synthetic Data Generation:</strong> Designed and developed a synthetic data generation pipeline with a data scientist, reducing data capture and annotation efforts.</li>
+                                    <li><strong>Object Detection Models:</strong> Trained and evaluated object detection models for real-world applications.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="experience-section">
+                                <h6 class="experience-subheader">Roles:</h6>
+                                <div class="role-item">
+                                    <h6 class="role-title">Computer Vision Engineer:</h6>
+                                    <ul>
+                                        <li>Achieved superior object detection performance by combining synthetic and manually collected data</li>
+                                        <li>Specialized in body-pose estimation and triplet loss classification models</li>
+                                    </ul>
+                                </div>
+                                <div class="role-item">
+                                    <h6 class="role-title">AI/ML Developer:</h6>
+                                    <ul>
+                                        <li>Gained expertise in ChatGPT 3.5 prompting, effectively generating diverse and context-aware responses</li>
+                                        <li>Developed and maintained AI model pipelines for production deployment</li>
+                                    </ul>
+                                </div>
+                                <div class="role-item">
+                                    <h6 class="role-title">Team Lead:</h6>
+                                    <ul>
+                                        <li>Managed the annotation team, ensuring data quality and project efficiency</li>
+                                        <li>Coordinated cross-functional collaboration between data scientists and engineers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <p class="TechStack">Tech Stack: Python, Computer Vision, Deep Learning, OpenCV, PyTorch, Flask, ONNX</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 3 -->
+                    <div class="experience-modal-slide">
+                        <div class="experience-modal-card">
+                            <h4>Data Science Intern</h4>
+                            <h5>Tech Startup</h5>
+                            <p class="duration">May 2021 - July 2021</p>
+                            
+                            <div class="experience-section">
+                                <h6 class="experience-subheader">Projects:</h6>
+                                <ul>
+                                    <li><strong>Customer Behavior Analysis:</strong> Developed machine learning models for customer behavior prediction and market analysis.</li>
+                                    <li><strong>Business Intelligence Dashboard:</strong> Created data visualization dashboards using Python and Tableau for business insights.</li>
+                                    <li><strong>Data Pipeline Development:</strong> Implemented data preprocessing pipelines for cleaning and transforming large datasets.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="experience-section">
+                                <h6 class="experience-subheader">Roles:</h6>
+                                <div class="role-item">
+                                    <h6 class="role-title">Data Scientist:</h6>
+                                    <ul>
+                                        <li>Developed predictive models for customer behavior and market trends</li>
+                                        <li>Created comprehensive data analysis reports and presentations</li>
+                                    </ul>
+                                </div>
+                                <div class="role-item">
+                                    <h6 class="role-title">Business Analyst:</h6>
+                                    <ul>
+                                        <li>Collaborated with cross-functional teams to deliver data-driven solutions for business problems</li>
+                                        <li>Presented findings and recommendations to stakeholders and management teams</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <p class="TechStack">Tech Stack: Python, Pandas, Scikit-learn, Tableau, SQL, Jupyter Notebooks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience Modal Navigation -->
+            <div class="experience-modal-nav">
+                <button class="experience-modal-btn prev-btn" onclick="slideExperienceModal('prev')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="experience-modal-dots">
+                    <span class="experience-modal-dot active" onclick="goToExperienceModalSlide(0)"></span>
+                    <span class="experience-modal-dot" onclick="goToExperienceModalSlide(1)"></span>
+                    <span class="experience-modal-dot" onclick="goToExperienceModalSlide(2)"></span>
+                </div>
+                <button class="experience-modal-btn next-btn" onclick="slideExperienceModal('next')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
