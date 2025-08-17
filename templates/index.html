@@ -268,21 +268,70 @@
     </section>
 
     <!-- Contact Section - Editable -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2><i class="fas fa-address-card"></i> Contact</h2>
-            <div class="contact-details">
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Heading -->
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                    <i class="fas fa-address-card text-primary-500 mr-2"></i> Get in Touch
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    Connect with me via email or LinkedIn, or drop a message below!
+                </p>
+            </div>
+            
+            <!-- Contact Info Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                <!-- Email -->
                 <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:nuthanchoudari@gmail.com" id="emailContact" class="editable">Mail</a>
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope text-primary-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-800 dark:text-gray-200 font-semibold text-lg">Email</h3>
+                        <a href="mailto:nuthanchoudari@gmail.com" id="emailContact" class="text-primary-500 hover:text-primary-600 transition-colors duration-200">nut@gmail.com</a>
+                    </div>
                 </div>
+                
+                <!-- LinkedIn -->
                 <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/sai-kiran-798943197/" id="linkedinContact" class="editable" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin text-primary-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-800 dark:text-gray-200 font-semibold text-lg">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/sai-kiran-798943197/" id="linkedinContact" target="_blank" rel="noopener noreferrer" class="text-primary-500 hover:text-primary-600 transition-colors duration-200">abc-ram</a>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Contact Form -->
+            <form id="contactForm" class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required class="form-input w-full" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required class="form-input w-full" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="1" required class="form-textarea w-full" placeholder="Your message here..."></textarea>
+                    </div>
+                </div>
+                <div class="text-center pt-4">
+                    <button type="submit" class="btn-primary px-6 py-3 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i> Send Message
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
+
 
     <footer>
         <div class="container">
