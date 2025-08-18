@@ -1,0 +1,25 @@
+name: Keep Render App Alive & Daily Deploy
+
+on:
+  schedule:
+    - cron: "0 * * * *"      # Every hour for ping
+    - cron: "0 6 * * *"      # Daily at 6 AM UTC for deploy
+  workflow_dispatch:          # Allow manual run
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render App
+        run: |
+          echo "Pinging Render app to prevent sleep..."
+          curl -s --head https://workhub.onrender.com/ || echo "Ping failed"
+
+  daily-deploy:
+    if: github.event.schedule == '0 6 * * *' # Only run on daily schedule
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render Deploy Hook
+        run: |
+          echo "Triggering Render deploy..."
+          curl -X POST "$RENDER_DEPLOY_HOOK_URL"
