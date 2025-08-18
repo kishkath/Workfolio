@@ -126,7 +126,7 @@ nav ul li a i {
 
 .section h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 25px;
     color: #001f3f;
@@ -146,7 +146,7 @@ nav ul li a i {
   }
   
 .profile-content p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.7;
     color: #555;
     text-align: justify;
@@ -192,7 +192,7 @@ nav ul li a i {
 }
 
 .project-card h4 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #87CEEB;
     margin-bottom: 15px;
@@ -270,7 +270,7 @@ nav ul li a i {
     background: linear-gradient(135deg, #87CEEB, #4682B4);
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -297,7 +297,7 @@ nav ul li a i {
 }
 
 .experience-header h4 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
@@ -348,7 +348,7 @@ nav ul li a i {
 }
 
 .work-experience h3, .skills h3, .certifications h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #001f3f;
     margin-bottom: 18px;
@@ -368,7 +368,7 @@ nav ul li a i {
 }
 
 .experience-item h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
@@ -423,7 +423,7 @@ nav ul li a i {
 }
 
 .skills-group h4 {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: #001f3f;
     margin-bottom: 15px;
@@ -444,7 +444,7 @@ nav ul li a i {
     color: #333;
     padding: 8px 15px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid #e8d5c4;
@@ -536,12 +536,12 @@ nav ul li a i {
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0 auto 12px;
 }
 
 .certification-card h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #333;
     margin-bottom: 8px;
@@ -582,7 +582,7 @@ nav ul li a i {
     background: linear-gradient(135deg, #87CEEB, #4682B4);
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 0.7rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -637,7 +637,7 @@ nav ul li a i {
     background: linear-gradient(135deg, #87CEEB, #4682B4);
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 0.7rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -692,7 +692,7 @@ nav ul li a i {
     background: linear-gradient(135deg, #87CEEB, #4682B4);
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -742,7 +742,7 @@ nav ul li a i {
 }
 
 .contact-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #666;
     margin-top: 10px;
 }
@@ -789,7 +789,7 @@ nav ul li a i {
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
 }
@@ -800,7 +800,7 @@ nav ul li a i {
 }
 
 .contact-details h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #333;
     margin-bottom: 8px;
@@ -843,14 +843,14 @@ nav ul li a i {
     font-weight: 600;
     color: #333;
     margin-bottom: 8px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .form-input, .form-textarea {
     padding: 12px 15px;
     border: 2px solid #e1e5e9;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
     background: white;
 }
@@ -937,7 +937,7 @@ footer {
     }
     
     header h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     
     nav ul {
@@ -946,7 +946,7 @@ footer {
     
     nav ul li a {
         padding: 8px 15px;
-        font-size: 0.9rem;
+        font-size: 0.75rem;
     }
     
     .section {
@@ -955,7 +955,7 @@ footer {
     }
     
     .section h2 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     
     .skills-certifications-container {
@@ -1001,11 +1001,11 @@ footer {
     }
     
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     
     .section h2 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     
     .contact-form {
@@ -1056,7 +1056,7 @@ footer {
     background: linear-gradient(135deg, #87CEEB, #4682B4);
     border: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1078,7 +1078,7 @@ footer {
 }
 
 .experience-modal-header h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #001f3f;
     margin: 0;
 }
@@ -1119,21 +1119,21 @@ footer {
 }
 
 .experience-modal-card h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #333;
     margin-bottom: 8px;
 }
 
 .experience-modal-card h5 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #87CEEB;
     margin-bottom: 8px;
 }
 
 .experience-modal-card .duration {
     color: #888;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 20px;
 }
 
@@ -1145,7 +1145,7 @@ footer {
 .experience-modal-card li {
     margin-bottom: 12px;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .experience-modal-card .TechStack {
@@ -1172,7 +1172,7 @@ footer {
     background: linear-gradient(135deg, #87CEEB, #4682B4);
     border: none;
     color: white;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1217,7 +1217,7 @@ footer {
 }
 
 .experience-subheader {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 600;
     color: #001f3f;
     margin-bottom: 12px;
@@ -1233,7 +1233,7 @@ footer {
 }
 
 .role-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #87CEEB;
     margin-bottom: 8px;
@@ -1248,7 +1248,7 @@ footer {
 .role-item li {
     margin-bottom: 6px;
     color: #555;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 /* Modal Experience Section Styling */
@@ -1257,7 +1257,7 @@ footer {
 }
 
 .experience-modal-card .experience-subheader {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: #001f3f;
     margin-bottom: 15px;
@@ -1273,7 +1273,7 @@ footer {
 }
 
 .experience-modal-card .role-title {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #87CEEB;
     margin-bottom: 10px;
@@ -1288,7 +1288,7 @@ footer {
 .experience-modal-card .role-item li {
     margin-bottom: 8px;
     color: #555;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5;
 }
 
